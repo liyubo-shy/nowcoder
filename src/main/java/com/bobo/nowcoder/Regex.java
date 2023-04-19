@@ -14,9 +14,14 @@ public class Regex {
     public static void main(String[] args) throws IOException {
         System.out.println("开始解析文件...");
 
-        //定义规则模板
+        /**
+         *定义规则模板
+         **/
         Pattern p = Pattern.compile("(.*?)<info>(.*?)</info>(.*?)");
-        //读取文件
+
+        /**
+         * 读取文件
+         **/
         String fileName = "D:\\javaReadFile\\s.txt";
         BufferedReader br1 = new BufferedReader(new FileReader(fileName));
 
@@ -40,12 +45,13 @@ public class Regex {
 
         BufferedWriter bufferedWriter;
         SimpleDateFormat df = new SimpleDateFormat("yyyy年MM月dd日HH时mm分ss秒");
-//        System.out.println(1/1000);
-//        System.out.println(199%1000);
-        //开始循环读取文件
 
+        /**
+         *输出文件路径
+         **/
         String path = "D:\\javaReadFile\\res\\" + df.format(new Date()) + ".txt";
         bufferedWriter = new BufferedWriter(new FileWriter(path, true));
+        //开始循环读取文件
         while ((line = br2.readLine()) != null) {
             //把当前行追加到buf中
             buf.append(line);
