@@ -38,7 +38,7 @@ public class Regex {
         //写入次数
         int realLine = 1;
 
-        BufferedWriter bufferedWriter = null;
+        BufferedWriter bufferedWriter;
         SimpleDateFormat df = new SimpleDateFormat("yyyy年MM月dd日HH时mm分ss秒");
 //        System.out.println(1/1000);
 //        System.out.println(199%1000);
